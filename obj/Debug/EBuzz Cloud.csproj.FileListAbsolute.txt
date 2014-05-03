@@ -1,6 +1,0 @@
-D:\Krunal\EBuzz Cloud\EBuzz Cloud\bin\EBuzz Cloud.dll
-D:\Krunal\EBuzz Cloud\EBuzz Cloud\bin\EBuzz Cloud.pdb
-D:\Krunal\EBuzz Cloud\EBuzz Cloud\obj\Debug\ResolveAssemblyReference.cache
-D:\Krunal\EBuzz Cloud\EBuzz Cloud\obj\Debug\EBuzz Cloud.dll
-D:\Krunal\EBuzz Cloud\EBuzz Cloud\obj\Debug\EBuzz Cloud.pdb
-D:\Krunal\EBuzz Cloud\EBuzz Cloud\bin\MSCaptcha.xml

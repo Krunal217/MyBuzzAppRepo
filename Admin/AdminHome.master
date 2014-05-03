@@ -1,0 +1,186 @@
+<%@ master language="C#" autoeventwireup="true" inherits="Admin_AdminHome, App_Web_lqtn2zyf" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+    <title>E-Buzz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <link href="../styles/layout.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../images/E-buzz logo.jpeg">
+    <link href="../styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/template.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <script src="../scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="top">
+    <div class="wrapper row1">
+        <form runat="server" id="frm1">
+        <div id="header" class="clear">
+            <div class="fl_left">
+                <h1>
+                    <a href="index.html">E-Buzz</a></h1>
+            </div>
+            <fieldset>
+                <legend>Admin Login</legend>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="align_right">
+                    <asp:Image ID="imgphoto" runat="server" Height="75px" Width="75px" />
+                    <asp:Label ID="lblwelcome" runat="server" Text="Welcome"></asp:Label>
+                    <asp:Label ID="lblname" runat="server" Text=""></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="lnkbtnlogout" runat="server" OnClick="lnkbtnlogout_Click">Logout</asp:LinkButton>
+                </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper row2">
+            <div id="topnav">
+                <ul>
+                    <li class="active"><a href="AdminHome.aspx">Homepage</a></li>
+                    <li><a href="AdminCountry.aspx">Country</a>
+                        <ul>
+                            <li><a href="AdminState.aspx">State</a></li>
+                            <li><a href="AdminCity.aspx">City</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="AdminCategory.aspx">Category</a>
+                        <ul>
+                            <li><a href="AdimnSubCategory.aspx">Sub Category</a></li>
+                            <li><a href="AdminCollages.aspx">Collages</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="AdminCareerOption.aspx">Career Option</a>
+                        <ul>
+                        </ul>
+                    </li>
+                    <li><a href="AdminUser.aspx">Manage User</a>
+                        <ul>
+                        </ul>
+                    </li>
+                    <li><a href="AdminExamination.aspx">Examination</a>
+                        <ul>
+                        <li><a href="AdminCategoryExamination.aspx">Examination Question</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Knowledge Center</a>
+                        <ul>
+                            <li><a href="AdimnE-Book.aspx">E-Materials</a></li>
+                            <li><a href="AdminExamResult.aspx">Exam Results</a></li>
+                        </ul>
+                    </li>
+                    <li class="last"><a href="AdminContactUs.aspx">Contact Us</a></li>
+                </ul>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <%--<div class="wrapper row3">
+        <div id="featured_slide">
+            <!-- ####################################################################################################### -->
+            <dl class="slidedeck">
+                <dt>Slide 1</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+                <dt>Slide 2</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+                <dt>Slide 3</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+                <dt>Slide 4</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+                <dt>Slide 5</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+            </dl>
+        </div>
+        <!-- ####################################################################################################### -->
+    </div>--%>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper row4">
+            <div id="container" class="clear">
+                <!-- ####################################################################################################### -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <form id="form1" runat="server">
+                    </form>
+                    <!--    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>  -->
+                </asp:ContentPlaceHolder>
+                <!-- ####################################################################################################### -->
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper row5">
+            <div id="footer" class="clear">
+                <!-- ####################################################################################################### -->
+                <div class="foot_contact">
+                    <h2>
+                        Collages In India By Category</h2>
+                    <address>
+                    <ul>
+                        <li><a href="#">Animation & Multimedia</a></li>
+                        <li><a href="#">Architecture</a></li>
+                        <li><a href="#">Arts & Science</a></li>
+                        <li><a href="#">Engineering & Technology</a></li>
+                        <li><a href="#">Fashion & Design</a></li>
+                        <li><a href="#">Hotel Management</a></li>
+                        <li><a href="#">Management & Business</a></li>
+                        <li><a href="#">Media & Films Comunication</a></li>
+                        <li><a href="#">Medical</a></li>
+                        <li><a href="#">Nursing</a></li>
+                        <li><a href="#">Pharmacy</a></li>
+                        <li><a href="#">Tourism & Travel</a></li>
+                        <li><a href="#">Hospitality Management</a></li>
+                    </ul>
+                    </address>
+                </div>
+                <div class="footbox">
+                    <h2>
+                        Test Preparation</h2>
+                    <ul>
+                        <li><a href="#">Engineering Entrance Exam</a></li>
+                        <li><a href="#">MBA Entrance Exam</a></li>
+                        <li><a href="#">MCA Entrance Exam</a></li>
+                        <li><a href="#">Nursing Entrance Exam</a></li>
+                        <li><a href="#">Pharmacy Entrance Exam</a></li>
+                        <li><a href="#">Study Abroad Exam</a></li>
+                    </ul>
+                </div>
+                <div class="footbox">
+                    <h2>
+                        Knowledge Center</h2>
+                    <ul>
+                        <li><a href="#">News Alerts</a></li>
+                        <li><a href="#">Admission Notice</a></li>
+                        <li><a href="#">Exam Results</a></li>
+                        <li><a href="#">Countries</a></li>
+                    </ul>
+                </div>
+                <div class="footbox last">
+                    <h2>
+                        E-Buzz</h2>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Web Feedback</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- ####################################################################################################### -->
+            </div>
+        </form>
+    </div>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper">
+        <div id="copyright" class="clear">
+            <p class="fl_left">
+                Copyright &copy; 2013 - 2014 All Rights Reserved - <a href="#">E-Buzz</a></p>
+        </div>
+    </div>
+    <script type="text/javascript">        $('.slidedeck').slidedeck();</script>
+    </div>
+</body>
+</html>

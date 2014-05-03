@@ -1,0 +1,311 @@
+<%@ master language="C#" autoeventwireup="true" inherits="Visitors_Visitor, App_Web_mec4yzll" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+    <title>E-Buzz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <link href="../styles/layout.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/button.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <script src="../scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <link rel="icon" href="../images/E-buzz logo.jpeg">
+    <style>
+        .cls
+        {
+            border: 0px solid gray;
+            width: 800px;
+            height: auto;
+            padding: 15px;
+            margin-top: 30px;
+            margin-left: 95px;
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 0px 0px 20px #072C53;
+            margin: 5px 0px 0px 0px;
+        }
+        #reg
+        {
+            margin: 5px 0px 0px 295px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="top">
+    <form runat="server" id="frm1">
+    <div class="wrapper row1">
+        <div id="header" class="clear" style="text-align: right;">
+            <div class="fl_left">
+                <h1>
+                    <a href="index.html">E-Buzz</a></h1>
+            </div>
+            <fieldset>
+                <legend>Student Login</legend>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="lnkbtnreg" runat="server" PostBackUrl="~/User (Student)/RegistrationPage.aspx">Registration Here!!!</asp:LinkButton>
+                <br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:ImageButton ID="imgbtnlogin" runat="server" ImageUrl="~/images/sign_in.gif"
+                    PostBackUrl="~/User (Student)/LoginPage.aspx" />
+            </fieldset>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper row2">
+            <div id="topnav">
+                <ul>
+                    <li class="active"><a href="VisitorHome.aspx">Homepage</a></li>
+                    <li><a href="#">Top Collages</a>
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnartscollages" runat="server" OnClick="lnkbtnartscollages_Click">Arts Collages</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtncommerce" runat="server" OnClick="lnkbtncommerce_Click">Commerce Collages</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnsciencecollages" runat="server" OnClick="lnkbtnsciencecollages_Click">Science Collages</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnanimation" runat="server" OnClick="lnkbtnanimation_Click">Animation Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnarchitecture" runat="server" OnClick="lnkbtnarchitecture_Click">Architecture Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnengineering" runat="server" OnClick="lnkbtnengineering_Click">Engineering Collages</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnbanking" runat="server" OnClick="lnkbtnbanking_Click">Banking & Finance Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtncomputer" runat="server" OnClick="lnkbtncomputer_Click">Computer & IT Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnhotelmanagement" runat="server" OnClick="lnkbtnhotelmanagement_Click">Hotel Management Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnbusiness" runat="server" OnClick="lnkbtnbusiness_Click">Management and Business Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnmedical" runat="server" OnClick="lnkbtnmedical_Click">Medical & Pharmacy Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtntravel" runat="server" OnClick="lnkbtntravel_Click">Travel & Tourism Institute</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Career Option</a>
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnartscareer" runat="server" CommandArgument="10" OnCommand="lnkbtnartscareer_Command">Arts</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtncommercecareer" runat="server" CommandArgument="5" OnCommand="lnkbtncommercecareer_Command">Commerce</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnsciencecareer" runat="server" CommandArgument="6" OnCommand="lnkbtnsciencecareer_Command">Science</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnanimationcareer" runat="server" CommandArgument="8" OnCommand="lnkbtnanimationcareer_Command">Animation & Multimedia</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnarchitecturecareer" runat="server" CommandArgument="9"
+                                    OnCommand="lnkbtnarchitecturecareer_Command">Architecture</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnengineeringcareer" runat="server" CommandArgument="7" OnCommand="lnkbtnengineeringcareer_Command">Engineering</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnbankingcareer" runat="server" CommandArgument="11" OnCommand="lnkbtnbankingcareer_Command">Banking & Finance</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtncomputercareer" runat="server" CommandArgument="12" OnCommand="lnkbtncomputercareer_Command">Computer & IT</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnhotelcareer" runat="server" CommandArgument="13" OnCommand="lnkbtnhotelcareer_Command">Hotel Management</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnbusinesscareer" runat="server" CommandArgument="14" OnCommand="lnkbtnbusinesscareer_Command">Management and Business</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnmedicalcareer" runat="server" CommandArgument="15" OnCommand="lnkbtnmedicalcareer_Command">Medical & Pharmacy</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtntravelcareer" runat="server" CommandArgument="16" OnCommand="lnkbtntravelcareer_Command">Travel & Tourism</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Study Abroad</a>
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnaustralia" runat="server" OnClick="lnkbtnaustralia_Click">Australia</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtncanada" runat="server" OnClick="lnkbtncanada_Click">Canada</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnchina" runat="server" OnClick="lnkbtnchina_Click">China</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnnewzealand" runat="server" OnClick="lnkbtnnewzealand_Click">New Zealand</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtmsouthafrica" runat="server" OnClick="lnkbtmsouthafrica_Click">South Africa</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnusa" runat="server" OnClick="lnkbtnusa_Click">USA</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnuk" runat="server" OnClick="lnkbtnuk_Click">UK</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnrussia" runat="server" OnClick="lnkbtnrussia_Click">Russia</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnsingapore" runat="server" OnClick="lnkbtnsingapore_Click">Singapore</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Examination</a>
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnengineeringexam" runat="server" CommandArgument="7" OnCommand="lnkbtnengineeringexam_Command">Engineering Entrance Exam</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnmedicalexam" runat="server" CommandArgument="15" OnCommand="lnkbtnmedicalexam_Command">Medical Entrance Exam</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnpharmacyexam" runat="server" CommandArgument="15" OnCommand="lnkbtnpharmacyexam_Command">Pharmacy Entrance Exam</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Knowledge Center</a>
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnematerial" runat="server" OnClick="lnkbtnematerial_Click">E-Materials</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnexmresult" runat="server" OnClick="lnkbtnexmresult_Click">Exam Results</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li class="last"><a href="VisitorContactUS.aspx">Contact Us</a></li>
+                </ul>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <%--<div class="wrapper row3">
+        <div id="featured_slide">
+            <!-- ####################################################################################################### -->
+            <dl class="slidedeck">
+                <dt>Slide 1</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+                <dt>Slide 2</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+                <dt>Slide 3</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+                <dt>Slide 4</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+                <dt>Slide 5</dt>
+                <dd>
+                    <img src="images/demo/featured-slide/735x360.gif" alt="" /></dd>
+            </dl>
+        </div>
+        <!-- ####################################################################################################### -->
+    </div>--%>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper row4">
+            <div id="container" class="clear">
+                <!-- ####################################################################################################### -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+                </asp:ContentPlaceHolder>
+                <!-- ####################################################################################################### -->
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper row5">
+            <div id="footer" class="clear">
+                <!-- ####################################################################################################### -->
+                <div class="foot_contact">
+                    <h2>
+                        Collages In India By Category</h2>
+                    <address>
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnarts1" runat="server" OnClick="lnkbtnarts1_Click">Arts Collages</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lmkbtncommerce1" runat="server" OnClick="lmkbtncommerce1_Click">Commerce Collages</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnscience1" runat="server" OnClick="lnkbtnscience1_Click">Science Collages</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnanimation1" runat="server" OnClick="lnkbtnanimation1_Click">Animation Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnarchitecture1" runat="server" OnClick="lnkbtnarchitecture1_Click">Architecture Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnengineering1" runat="server" OnClick="lnkbtnengineering1_Click">Engineering Collages</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnbanking1" runat="server" OnClick="lnkbtnbanking1_Click">Banking & Finance Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtncomputer1" runat="server" OnClick="lnkbtncomputer1_Click">Computer & IT Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnhotel1" runat="server" OnClick="lnkbtnhotel1_Click">Hotel Management Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnmanagement1" runat="server" OnClick="lnkbtnmanagement1_Click">Management and Business Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnmedical1" runat="server" OnClick="lnkbtnmedical1_Click">Medical & Pharmacy Institute</asp:LinkButton></li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtntravel1" runat="server" OnClick="lnkbtntravel1_Click">Travel & Tourism Institute</asp:LinkButton></li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="footbox">
+                    <h2>
+                        Study Abroad</h2>
+                    <ul>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnaustralia1" runat="server" OnClick="lnkbtnaustralia1_Click">Australia</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtncanada1" runat="server" OnClick="lnkbtncanada1_Click">Canada</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnchina1" runat="server" OnClick="lnkbtnchina1_Click">China</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnnewzealand1" runat="server" OnClick="lnkbtnnewzealand1_Click">New Zealand</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnsouthafrica1" runat="server" OnClick="lnkbtnsouthafrica1_Click">South Africa</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnusa1" runat="server" OnClick="lnkbtnusa1_Click">USA</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnuk1" runat="server" OnClick="lnkbtnuk1_Click">UK</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnrussia1" runat="server" OnClick="lnkbtnrussia1_Click">Russia</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnsingapore1" runat="server" OnClick="lnkbtnsingapore1_Click">Singapore</asp:LinkButton></li>
+                    </ul>
+                </div>
+                <div class="footbox">
+                    <h2>
+                        Examination</h2>
+                    <ul>
+                        <li>
+                            <asp:LinkButton ID="lnkbtncareerengineering1" runat="server" CommandArgument="7"
+                                OnCommand="lnkbtncareerengineering1_Command">Engineering Entrance Exam</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtncareermedical" runat="server" CommandArgument="15" OnCommand="lnkbtncareermedical_Command">Medical Entrance Exam</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtncareerpharmacy" runat="server" CommandArgument="15" OnCommand="lnkbtncareerpharmacy_Command">Pharmacy Entrance Exam</asp:LinkButton></li>
+                    </ul>
+                </div>
+                <div class="footbox">
+                    <h2>
+                        Knowledge Center</h2>
+                    <ul>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnematerials1" runat="server" OnClick="lnkbtnematerials1_Click">E-Materials</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkbtnexamresult1" runat="server" OnClick="lnkbtnexamresult1_Click">Exam Results</asp:LinkButton></li>
+                    </ul>
+                </div>
+                <div class="footbox last">
+                    <h2>
+                        E-Buzz</h2>
+                    <ul>
+                        <li><a href="VisitorHome.aspx">Home</a></li>
+                        <li><a href="VisitorContactUS.aspx">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- ####################################################################################################### -->
+            </div>
+    </form>
+    <%--</div>--%>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper">
+        <div id="copyright" class="clear">
+            <p class="fl_left">
+                Copyright &copy; 2013 - 2014 All Rights Reserved - <a href="#">E-Buzz</a></p>
+        </div>
+    </div>
+    <script type="text/javascript">        $('.slidedeck').slidedeck();</script>
+    <div class="fl_right" style="margin-right:10px;">
+        <!-- BEGIN: Powered by Supercounters.com -->
+        <center>
+        <a style="font-size:medium; color:#5F8EC2;">Hit Counter : </a>
+            <script type="text/javascript" src="http://widget.supercounters.com/hit.js"></script>
+            <script type="text/javascript">                sc_hit(833186, 0, 9);</script>
+            <br/>
+        </center>
+        <!-- END: Powered by Supercounters.com -->
+    </div>
+</body>
+</html>
