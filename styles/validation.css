@@ -1,0 +1,90 @@
+﻿.dialog
+{
+    display:none;
+    height:100%;
+    width:100%;
+    float:left;
+    background:black;
+    position:fixed;
+    top:0px;
+    -moz-opacity:0.1;
+    -khtml-opacity:0.1;
+    opacity:0.1;
+    filter:alpha(opacity=20);
+    z-index:1;
+}
+
+.popupMsg
+{
+    border:1px solid #78A3D7;
+    border-radius:5px 5px 0px 0px;
+    display:none;
+    background-color:White;
+    position:fixed;
+    top:25%;
+    left:35%;
+    z-index:2;
+    color:#1B4373;
+    font-size:9.25pt;
+    font-family:Verdana;
+}
+
+.popupheaderErr
+{
+    background:#6A99D3;
+     background:-webkit-gradient(linear ,0 0,0 bottom,from(#F1F9FE),to(#6A99D3));
+    background:-webkit-linear-gradient(#F1F9FE,#6A99D3);
+    background:-moz-linear-gradient(#F1F9FE,#6A99D3);
+    background:-ms-linear-gradient(#F1F9FE,#6A99D3);
+    background:-o-linear-gradient(#F1F9FE,#6A99D3);
+    -pie-backgroung:linear-gradient(#F1F9FE,#6A99D3);
+    filter:progid:DXImageTransfrom.Microsoft.gradient(StartColorStr='#F1F9FE',EndColorStr='#6A99D3');
+    color:Black;
+    font-weight:bold;
+    font-weight:normal;
+    cursor:move;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight:bold;
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-bottom:5px;
+}
+
+.popfooterErr
+{
+    background:#F1F9FE;
+    background:-webkit-gradient(linear ,0 0,0 bottom,from(#F1F9FE),to(#F1F9FE));
+    background:-webkit-linear-gradient(#F1F9FE,#F1F9FE);
+    background:-moz-linear-gradient(#F1F9FE,#F1F9FE);
+    background:-ms-linear-gradient(#F1F9FE,#F1F9FE);
+    background:-o-linear-gradient(#F1F9FE,#F1F9FE);
+    -pie-backgroung:linear-gradient(#F1F9FE,#F1F9FE);
+    filter:progid:DXImageTransfrom.Microsoft.gradient(StartColorStr='#F1F9FE',EndColorStr='#F1F9FE');
+    color:Black;
+    font-weight:bold;
+    font-weight:normal;
+    cursor:move;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight:bold;
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-top:15px;
+    
+}
+
+.fclose
+{
+    color:Black;
+    font-size:9.25pt;
+    font-family:Verdana;
+}
+.fclose:hover
+{
+    color:Blue;
+    font-size:9.25pt;
+    font-family:Verdana;
+    text-decoration:underline;
+    cursor:pointer;
+}

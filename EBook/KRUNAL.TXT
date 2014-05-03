@@ -1,0 +1,181 @@
+1.
+
+create table tbl_salesman
+
+(
+
+     snum int primary key,
+
+     sname varchar(15),
+
+     city varchar(20),
+
+     commission int
+
+)
+
+create table tbl_customer
+
+(
+
+     cnum int primary key,
+
+     cname varchar(15),
+
+     city varchar(15),
+
+     rating int,
+
+     fk_snum int references tbl_salesman(snum)
+
+)
+
+create table tbl_order
+
+(
+
+     onum int primary key,
+
+     amount money,
+
+     odate smalldatetime,
+
+     fk_cnum int references tbl_customer(cnum),
+
+     fk_snum int references tbl_salesman(snum)
+
+)
+
+insert into tbl_salesman (snum,sname,city,commission) values ('1001','PIYUSH','LONDON','12')
+
+insert into tbl_salesman (snum,sname,city,commission) values ('1002','NIRAJ','SURAT','13')
+
+insert into tbl_salesman (snum,sname,city,commission) values ('1003','MITI','LONDON','11')
+
+insert into tbl_salesman (snum,sname,city,commission) values ('1004','RAJESH','BARODA','15')
+
+insert into tbl_salesman (snum,sname,city,commission) values ('1005','ANAND','NEW DELHI','1')
+
+insert into tbl_salesman (snum,sname,city,commission) values ('1006','RAM','PATAN','1')
+
+insert into tbl_salesman (snum,sname,city,commission) values ('1007','LAXMAN','BOMBAY','9')
+
+insert into tbl_customer(cnum,cname,city,rating,fk_snum) values ('2001','HARDIK','LONDON','100','1001')
+
+insert into tbl_customer(cnum,cname,city,rating,fk_snum) values ('2002','GITA','ROME','200','1003')
+
+insert into tbl_customer(cnum,cname,city,rating,fk_snum) values ('2003','LAXIT','SURAT','200','1002')
+
+insert into tbl_customer(cnum,cname,city,rating,fk_snum) values ('2004','GOVIND','BOMBAY','300','1002')
+
+insert into tbl_customer(cnum,cname,city,rating,fk_snum) values ('2005','CHANDRESH','LONDON','100','1001')
+
+insert into tbl_customer(cnum,cname,city,rating,fk_snum) values ('2006','CNAMPAK','SURAT','300','1007')
+
+insert into tbl_customer(cnum,cname,city,rating,fk_snum) values ('2007','PRATIK','ROME','100','1004')
+
+insert into tbl_customer(cnum,cname,city,rating,fk_snum) values ('2008','BONY','BARODA','400','1003')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3001','18.69','10-MAR-99','2008','1007')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3002','767.19','10-MAR-99','2001','1001')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3003','1900.1','10-MAR-99','2007','1004')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3004','5160.45','10-MAR-99','2003','1002')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3005','1098.25.','10-APR-99','2008','1007')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3006','1713.12','10-APR-99','2002','1003')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3007','75.75','10-MAY-99','2004','1002')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3008','4723','10-MAY-99','2006','1001')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3009','1309.95','10-MAY-99','2004','1002')
+
+insert into tbl_order(onum,amount,odate,fk_cnum,fk_snum) values ('3010','9898.87','10-JUN-99','2006','1001')
+
+2.     select * from tbl_customer where snum='1001'
+
+3.     select distinct s.sname,o.amount,o.odate from tbl_order o inner join tbl_salesman s on o.fk_snum=s.snum
+
+4.     select s.sname,s.city,s.commission from tbl_salesman s where s.city='LONDON' AND s.commision>10
+
+5.     select * from tbl_order o where o.amount>1000
+
+6.     select * from tbl_customer like cname 'G%'
+
+7.     select COUNT(onum) AS allorder from tbl_order o where o.odate='10-MAR-99'
+
+8.     select SUM(amount) AS Totalamount from tbl_order
+
+9.     begin tran
+
+        delete tbl_order o where o.onum=3005 & 3008
+
+        rollback tran
+
+10.
+
+1.)     update tbl_customer set city='AHMEDABAD' where cnum='2001'
+
+2.)     update tbl_salesman set commission='50' where sname='CHAMPAK'
+
+3.)     create savepoint AS s1
+
+4.)     update tbl_salesman set snum='1005' where city='AHMEDABAD'
+
+5.)     create savepoint AS s2
+
+6.)     begin s2
+
+         rollback s2
+
+11.     begin tran
+
+         delete tbl_order o where o.onum=3008 & 3010
+
+         commit tran
+
+12.     create view vw_insertsalesman
+
+(
+
+insert into tbl_salesman (snum,sname,city,commission) values ('1008','KRUNAL','NEW YORK','15')
+
+)
+
+13.     create procedure sp_salesman
+
+          (
+
+                @snum int,
+
+                @sname varchar(15),
+
+                @city varchar(20),
+
+                @commission int
+
+           )
+
+update tbl_salesman set(snum,sname,city,commission) values (@snum,@sname,@city,@commission)
+
+14.     create trigger salesmanupdate
+
+          on tbl_salesman
+
+          AS
+
+          AFTER UPDATE
+
+          if(UPDATE sname , UPDATE city)
+
+          update tbl_salesman set sname='JIGAR' , city='PUNE' where snum='1005'
+
+          AFTER UPDATE
+
+          END
+
+15.     create index tbl_salesman(city)
